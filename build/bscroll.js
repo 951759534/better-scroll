@@ -1231,7 +1231,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 	function addEvent(el, type, fn, capture) {
-	  el.addEventListener(type, fn, { passive: false, capture: !!capture });
+	  el.addEventListener(type, fn, { passive: false, capture: !!capture });   /*touchstart 和 touchmove 事件处理函数中调用 e.preventDefault() ，会被浏览器忽略掉，并不会阻止默认行为。*/
 	};
 
 	function removeEvent(el, type, fn, capture) {
